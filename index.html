@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced To-Do App</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">Task-Scedular</div> 
+        </nav>
+    </header>
+    <div class="container">
+
+        <aside class="sidebar">
+            <h3>Filter Tasks</h3>
+            <div class="filter-section">
+                <h4>Status</h4>
+                <label><input type="checkbox" id="filter-completed"> Completed Tasks</label>
+                <label><input type="checkbox" id="filter-pending"> Remaining Tasks</label>
+            </div>
+            <div class="filter-section">
+                <h4>Importance</h4>
+                <label><input type="checkbox" id="filter-low"> Low</label>
+                <label><input type="checkbox" id="filter-medium"> Medium</label>
+                <label><input type="checkbox" id="filter-high"> High</label>
+            </div>
+        </aside>
+
+        <main>
+            <div class="search-bar">
+                <input type="search" id="search" placeholder="Search Tasks">
+            </div>
+            <section>
+                <form class="task-form" id="taskForm">
+                    <input type="text" id="taskName" placeholder="Title" required>
+                    <input type="text" id="taskDes" placeholder="Description" required>
+                    <select id="selectCate">
+                        <option value="default">Category</option>
+                        <option value="work">Work</option>
+                        <option value="personal">Personal</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <select id="selectPriority">
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                    <input type="date" id="date" required>
+                    <button type="submit">Add Task</button>
+                </form>
+                <div class="task-list"></div>
+            </section>
+        </main>
+    </div>
+
+    
+    <script src="app.js"></script>
+</body>
+
+</html>
